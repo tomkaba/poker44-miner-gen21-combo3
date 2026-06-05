@@ -6,11 +6,12 @@
     "framework": "python-local-ensemble",
     "license": "MIT",
     "repo_url": "https://github.com/tomkaba/poker44-miner-gen21-combo3",
-    "training_data_statement": "Uses copied local scorer artifacts from the selected gen17 and gen22 runtime releases plus the vendored UID232 artifact bundle, preserving each component decision threshold inside the ensemble.",
+    "repo_commit": "d1d1bf10cf8b3fdb12deb104e058697b6a48e9af",
+    "training_data_statement": "Uses copied local scorer artifacts from the selected gen18, gen17, gen22, ml17, and uid232 runtime releases, preserving each release threshold inside the ensemble.",
     "private_data_attestation": "This miner does not train on validator-private human data.",
     "data_attestation": "This miner does not train on validator-private human data.",
     "inference_mode": "local",
-    "implementation_sha256": "85a43b0582fbd0472af1993f2c34fe96e85d03ce7299939a80ee05485948561d",
+    "implementation_sha256": "541bc4ea122caa1191a0464461b445760268126caef3085d786720aaa281cb6b",
     "implementation_files": [
         "neurons/miner.py",
         "start_miner.sh",
@@ -23,15 +24,6 @@
         "poker44/utils/misc.py",
         "poker44/utils/model_manifest.py",
         "poker44/validator/synapse.py",
-        "components/gen17_tuner_pre2/models/base_runtime/chunk_aggregator_model.npz",
-        "components/gen17_tuner_pre2/models/base_runtime/feature_extractor_frozen.py",
-        "components/gen17_tuner_pre2/models/base_runtime/hand_model.npz",
-        "components/gen17_tuner_pre2/models/base_runtime/model_manifest.json",
-        "components/gen17_tuner_pre2/models/base_runtime/score_chunk.py",
-        "components/gen17_tuner_pre2/models/model_manifest.json",
-        "components/gen17_tuner_pre2/models/score_chunk.py",
-        "components/gen17_tuner_pre2/models/tuner.json",
-        "components/gen17_tuner_pre2/poker44/miner_heuristics.py",
         "components/gen17_tuner_pre6/models/base_runtime/chunk_aggregator_model.npz",
         "components/gen17_tuner_pre6/models/base_runtime/feature_extractor_frozen.py",
         "components/gen17_tuner_pre6/models/base_runtime/hand_model.npz",
@@ -41,6 +33,8 @@
         "components/gen17_tuner_pre6/models/score_chunk.py",
         "components/gen17_tuner_pre6/models/tuner.json",
         "components/gen17_tuner_pre6/poker44/miner_heuristics.py",
+        "components/gen18_2/poker44/miner_heuristics.py",
+        "components/gen18_2/weights/gen18_tens2_0.988104.ts",
         "components/gen22full2/poker44/gen20_hybrid_model.py",
         "components/gen22full2/poker44/miner_heuristics.py",
         "components/gen22full2/poker44_ml/__init__.py",
@@ -62,5 +56,5 @@
         "components/uid232/poker44_ml/inference.py",
         "components/uid232/score_uid232_v5_artifact.py"
     ],
-    "notes": "gen21-combo3 majority-vote ensemble over gen17_tuner_pre2, gen17_tuner_pre6, gen22full2, ml17_pre3, and uid232, preserving each component threshold while deciding by simple 5-model majority."
+    "notes": "gen21-combo3 majority-vote ensemble over gen18_2, gen17_tuner_pre6, gen22full2, ml17_pre3, and uid232, preserving each component threshold inside the combo runtime."
 }
