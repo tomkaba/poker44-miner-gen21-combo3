@@ -12,7 +12,7 @@ from typing import Any, Dict, Sequence
 
 BUNDLE_ROOT = Path(__file__).resolve().parent
 DEFAULT_REPO = BUNDLE_ROOT
-DEFAULT_DB = Path("/home/tk/training_gen15/log_management/miner_logs.db")
+DEFAULT_DB = BUNDLE_ROOT / "miner_logs.db"
 DEFAULT_PYTHON = Path(sys.executable)
 
 ARTIFACT_SPECS: Dict[str, Dict[str, str]] = {
